@@ -3,19 +3,19 @@ A custom NoSQL database using JSON documents written in Go
 
 
 ## What is it
-It is a custom-built NoSQL database which supports collections and JSON documents. It also provides an API for performing the CRUD operations on the data (currently only CRD!).
+It is a custom-built NoSQL database which supports collections and JSON documents. It also provides an API for performing the CRUD operations on the data.
 
-## Get Started
+## Get started
 To run the database locally:
-1. Clone the repository ```git clone https://github.com/KanzaSheikh/customJSONDocDB.git```
-2. Navigate to the cmd/main directory
-3. Run the project ```go run main.go```
+1. Clone the repository ```git clone https://github.com/KanzaSheikh/customJSONDocDB.git```.
+2. Navigate to the cmd/main directory.
+3. Run the project ```go run main.go```.
 
-## Data Manipulation
+## Data operations
 Upon running the application, an HTTP server is started which can be accessed through the local API at port 8000 to perform simple CRUD operations.
 
 ## How to?
-Following are a few example operations
+Following are a few example operations:
 
 #### READ
 The database supports two kind of read operations i.e. reading all documents and reading documents by ID.
