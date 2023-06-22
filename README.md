@@ -18,22 +18,22 @@ Upon running the application, an HTTP server is started which can be accessed th
 Following are a few example operations:
 
 #### READ
-The database supports two kind of read operations i.e. reading all documents and reading documents by ID.
+The database supports two kinds of read operations i.e. reading all documents and reading documents by ID.
 
 For reading all documents within a collection, run:
 
-```curl -i -s -X GET http://localhost:8000/{collection}```
+```curl --request GET http://localhost:8000/users```
 
 For reading a document by ID:
 
-```curl -i -s -X GET http://localhost:8000/{collection}/{id}```
+```curl --request GET http://localhost:8000/users/{id}```
 
 #### CREATE
 New documents can be created within a collection by using the following route. If a collection already exists, the document is created inside it, otherwise a new collection is created.
 
-```curl -i -s -X POST http://localhost:8000/users -H "Content-Type: application/json" -d {JSON-body}```
+```curl --request POST http://localhost:8000/users --header "Content-Type: application/json" --data '{body}'```
 
 #### DELETE
 For deleting existing documents, run:
 
-```curl -i -s -X DELETE http://localhost:8000/users/{id}```
+```curl --request DELETE http://localhost:8000/users/{id}```
