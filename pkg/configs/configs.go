@@ -60,7 +60,7 @@ func (d *Driver) getOrCreateMutex(collection string) *sync.Mutex{
 	return m
 }
 
-func GetOrCreateMutex(dir string, collection string) *sync.Mutex{
+func GetMutex(dir string, collection string) *sync.Mutex{
 	db, err := New(dir, nil)
 	if err != nil {
 		fmt.Println(err)

@@ -86,7 +86,7 @@ func CreateDocument(w http.ResponseWriter, r *http.Request){
 	collection := params["collection"]
 	_ = json.NewDecoder(r.Body).Decode(&user)
 
-	mutex := configs.GetOrCreateMutex(_dir, collection)
+	mutex := configs.GetMutex(_dir, collection)
 	mutex.Lock()
 	defer mutex.Unlock()
 
@@ -167,7 +167,7 @@ func DeleteDocument(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Collection is missing")
 	}
 
-	mutex := configs.GetOrCreateMutex(_dir, collection)
+	mutex := configs.GetMutex(_dir, collection)
 	mutex.Lock()
 	defer mutex.Unlock()
 
